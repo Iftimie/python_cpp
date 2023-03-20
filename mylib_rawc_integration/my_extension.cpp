@@ -11,7 +11,7 @@ static PyObject* interact(PyObject* self, PyObject* args) {
     npy_uint8* data = (npy_uint8*)PyArray_DATA(array);
 
     MyLibClass* mylib_class_ptr = new MyLibClass();
-    mylib_class_ptr->print_value(5);
+    mylib_class_ptr->printValue(5);
     mylib_class_ptr->sendDataBuffer((char*) data);
 
     Py_DECREF(array);

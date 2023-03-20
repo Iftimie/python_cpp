@@ -7,7 +7,7 @@ image[0, 3] = 3
 
 mylib = ctypes.CDLL("./mylib_wrapper.so")
 mylib_ptr = mylib.MyLibClass_new()
-mylib.MyLibClass_print_value(mylib_ptr, 10)
+mylib.MyLibClass_printValue(mylib_ptr, 10)
 mylib.MyLibClass_sendDataBuffer(mylib_ptr, image.ctypes.data_as(ctypes.POINTER(ctypes.c_char)))
 
 
@@ -18,7 +18,7 @@ MyLibClass_new.restype = ctypes.c_void_p
 MyLibClass_new.argtypes = []
 mylib_ptr = MyLibClass_new()
 
-MyLibClass_print_value = mylib.MyLibClass_print_value
-MyLibClass_print_value.restype = ctypes.c_void_p
-MyLibClass_print_value.argtypes = [ctypes.c_void_p, ctypes.c_int]
-MyLibClass_print_value(mylib_ptr, 10)
+MyLibClass_printValue = mylib.MyLibClass_printValue
+MyLibClass_printValue.restype = ctypes.c_void_p
+MyLibClass_printValue.argtypes = [ctypes.c_void_p, ctypes.c_int]
+MyLibClass_printValue(mylib_ptr, 10)

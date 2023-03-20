@@ -5,7 +5,7 @@ namespace py = pybind11;
 
 void interact(py::array_t<unsigned char> image){
     MyLibClass* mylib_ptr = new MyLibClass();
-    mylib_ptr->print_value(5);
+    mylib_ptr->printValue(5);
     mylib_ptr->sendDataBuffer((char*)image.data());
     delete mylib_ptr;
 }

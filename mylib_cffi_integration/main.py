@@ -7,10 +7,10 @@ image[0, 3] = 3
 
 ffi = cffi.FFI()
 ffi.cdef("void* _ZN10MyLibClassC1Ev();")
-ffi.cdef("void _ZN10MyLibClass11print_valueEi(void* obj, int x);")
+ffi.cdef("void _ZN10MyLibClass10printValueEi(void* obj, int x);")
 ffi.cdef("void _ZN10MyLibClass14sendDataBufferEPc(void* obj, char* ptr);")
 C = ffi.dlopen("../mylib/libmylib.so")
 
 obj = C._ZN10MyLibClassC1Ev()
-C._ZN10MyLibClass11print_valueEi(obj, 10)
+C._ZN10MyLibClass10printValueEi(obj, 10)
 C._ZN10MyLibClass14sendDataBufferEPc(obj, ffi.cast("char *", image.ctypes.data))

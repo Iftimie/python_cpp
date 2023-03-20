@@ -3,7 +3,7 @@
 
 MyLibFacade::MyLibFacade (int device_index) {
     mylib_ptr = new MyLibClass();
-    mylib_ptr->print_value(5);
+    mylib_ptr->printValue(5);
 }
 
 void MyLibFacade::sendDataBuffer (char* data, int length, Metadata metadata) {

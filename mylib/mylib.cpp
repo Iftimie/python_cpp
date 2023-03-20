@@ -3,7 +3,7 @@
 
 MyLibClass::MyLibClass(){ }
 
-void MyLibClass::print_value(int x)
+void MyLibClass::printValue(int x)
 {
     printf("Printing value %d\n", x);
 }

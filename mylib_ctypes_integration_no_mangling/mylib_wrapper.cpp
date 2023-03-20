@@ -5,8 +5,8 @@ extern "C" {
         return new MyLibClass();
     }
 
-    void MyLibClass_print_value(MyLibClass* obj, int x) {
-        obj->print_value(x);
+    void MyLibClass_printValue(MyLibClass* obj, int x) {
+        obj->printValue(x);
     }
 
     void MyLibClass_sendDataBuffer(MyLibClass* obj, char* ptr) {
